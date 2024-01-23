@@ -1,6 +1,5 @@
-
-type Blogpost = {
-    id: string;
-    title: string;
-    date: string;
+type BlogPost = {
+    id: string,
+    title: string,
+    date: string,
 }

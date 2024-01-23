@@ -20,7 +20,7 @@ export function getSortedPostsData() {
         // Use gray-matter to parse the post metadata section
         const matterResult = matter(fileContents);
 
-        const blogPost: Blogpost = {
+        const blogPost: BlogPost = {
             id,
             title: matterResult.data.title,
             date: matterResult.data.date,
@@ -46,7 +46,7 @@ export async function getPostData(id: string) {
 
     const contentHtml = processedContent.toString();
 
-    const blogPostWithHTML: Blogpost & { contentHtml: string } = {
+    const blogPostWithHTML: BlogPost & { contentHtml: string } = {
         id,
         title: matterResult.data.title,
         date: matterResult.data.date,
