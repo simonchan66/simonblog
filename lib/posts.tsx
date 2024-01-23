@@ -20,7 +20,7 @@ export function getSortedPostsData() {
         // Use gray-matter to parse the post metadata section
         const matterResult = matter(fileContents);
 
-        const blogPost: BlogPost = {
+        const blogPost = {
             id,
             title: matterResult.data.title,
             date: matterResult.data.date,
@@ -33,7 +33,7 @@ export function getSortedPostsData() {
     return allPostsData.sort((a, b) => a.date < b.date ? 1 : -1);
 }
 
-export async function getPostData(id: string) {
+export async function getPostData(id:string) {
     const fullPath = path.join(postsDirectory, `${id}.md`);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
 
@@ -46,7 +46,7 @@ export async function getPostData(id: string) {
 
     const contentHtml = processedContent.toString();
 
-    const blogPostWithHTML: BlogPost & { contentHtml: string } = {
+    const blogPostWithHTMLS = {
         id,
         title: matterResult.data.title,
         date: matterResult.data.date,
@@ -54,5 +54,5 @@ export async function getPostData(id: string) {
     }
 
     // Combine the data with the id
-    return blogPostWithHTML
+    return blogPostWithHTMLS
 }

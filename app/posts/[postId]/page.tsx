@@ -6,7 +6,7 @@ import Link from "next/link"
 export function generateStaticParams() {
     const posts = getSortedPostsData()
 
-    return posts.map((post) => ({
+    return posts.map((post: { id: any }) => ({
         postId: post.id
     }))
 }
@@ -18,7 +18,7 @@ export default async function Post({ params }: { params: { postId: string } }) {
     const posts = getSortedPostsData()
     const { postId } = params
 
-    if (!posts.find(post => post.id === postId)) notFound()
+    if (!posts.find((post: { id: string }) => post.id === postId)) notFound()
 
     const { title, date, contentHtml } = await getPostData(postId)
 
