@@ -7,9 +7,10 @@ export default function Navbar() {
             <div className="max-w-6xl mx-auto flex justify-between items-center h-full">
                 <h1 className="text-white font-semibold text-xl">
                     <Link href="/" className="hover:text-gray-300 transition-colors">
-                   Simon Chan's Blog App made with Next.js
+                        Simon Chan&apos;s Blog App made with Next.js
                     </Link>
                 </h1>
+
                 <div className="flex items-center gap-6 text-white text-2xl">
                     <Link href="https://youtube.com/simonchan66" className="hover:text-red-600 transition-colors">
                 

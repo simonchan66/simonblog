@@ -1,6 +1,7 @@
 ---
 title: 'The Ups and Downs of Learning Java'
 date: '2024-01-16'
+
 ---
 
 Learning a new programming language is much like learning a new spoken language: it's thrilling, challenging, and sometimes a bit frustrating. My recent experience diving into Java is a perfect illustration of this. Java has been a staple in the tech industry for decades, and I was keen to understand why. But the journey was not without its obstacles.

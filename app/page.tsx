@@ -4,15 +4,16 @@ import Myprofilepic from "./myprofilepic/page";
 import Posts from "./posts/page";
 export default function Home() {
   return (
-
+<div>
 
     
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-    <Myprofilepic/>
+<Myprofilepic />
      <p className = "text-4xl font-bold text-center">
-     Simon's Blog App</p>
+     Simon&apos;s Blog App</p>
     <Posts />
     </main>
+    </div>
 
   );
 }
